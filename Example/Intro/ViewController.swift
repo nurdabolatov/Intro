@@ -42,7 +42,7 @@ final class ViewController: UIViewController {
             (lorem, UIImage(named: "9")),
             (lorem, UIImage(named: "10"))
         ]
-        vc.animationType = .raise
+        vc.animationType = .rotate
         vc.titleColor = .black
         vc.titleFont = .systemFont(ofSize: 20)
         vc.imageContentMode = .scaleAspectFit
