@@ -1,0 +1,6 @@
+framework module Intro {
+  umbrella header "Intro-umbrella.h"
+
+  export *
+  module * { export * }
+}

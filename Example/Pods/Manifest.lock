@@ -1,0 +1,16 @@
+PODS:
+  - Intro (0.1.0)
+
+DEPENDENCIES:
+  - Intro (from `../`)
+
+EXTERNAL SOURCES:
+  Intro:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Intro: a5314a7e6286d9a078a69fdf67829fc4b8cd35a9
+
+PODFILE CHECKSUM: f9d6b8b0ba1728016e0b67214e2d12545c770f9c
+
+COCOAPODS: 1.0.0
