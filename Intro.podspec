@@ -18,12 +18,13 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
+Create a simple animated walkthrough / intro / tutorial:
 1. Create an instance of IntroViewController()
 2. Set images, titles
 3. Present it!
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/Intro'
+  s.homepage         = 'https://github.com/nbolatov/Intro'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Nurdaulet' => 'b.nurdaulet.b@gmail.com' }
