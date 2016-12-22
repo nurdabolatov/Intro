@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class IntroViewController: UIViewController {
+class IntroViewController: UIViewController {
 
     public var items: [(String, UIImage)]!
 

@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class IntroRotateCollectionViewCell: UICollectionViewCell {
+class IntroRotateCollectionViewCell: UICollectionViewCell {
 
     static let identifier = "TutorialRotateCollectionViewCell"
 
