@@ -8,12 +8,12 @@
 
 import UIKit
 
-public class IntroRotateCollectionViewCell: UICollectionViewCell {
+public class IntroRotateCollectionViewCell: UICollectionViewCell, IntroCollectionViewCellAnimatable {
 
     static let identifier = "IntroRotateCollectionViewCell"
 
-    let textLabel = UILabel()
-    let imageView = UIImageView()
+    var textLabel = UILabel()
+    var imageView = UIImageView()
     var closeButton = UIButton(type: .system)
     var isCloseButtonHidden = true {
         didSet {

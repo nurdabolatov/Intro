@@ -8,15 +8,26 @@
 
 import UIKit
 
-public class IntroRaiseCollectionViewCell: UICollectionViewCell {
+public class IntroRaiseCollectionViewCell: UICollectionViewCell, IntroCollectionViewCellAnimatable {
 
     static let identifier = "IntroRaiseCollectionViewCell"
 
-    let imageView = UIImageView()
+    var textLabel = UILabel()
+    var imageView = UIImageView()
+    var closeButton = UIButton(type: .system)
+    var isCloseButtonHidden = true {
+        didSet {
+            closeButton.isHidden = isCloseButtonHidden
+            textLabel.frame.size.height = imageView.frame.origin.y - 20
+                + (isCloseButtonHidden ? 0 : -44)
+        }
+    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureImageView()
+        configureTextLabel()
+        configureCloseButton()
     }
 
     required public init?(coder aDecoder: NSCoder) {
@@ -29,6 +40,29 @@ public class IntroRaiseCollectionViewCell: UICollectionViewCell {
         transform.m34 = CGFloat(-1) / imageView.frame.width
         transform = CATransform3DRotate(transform, 0, 1, 0, 0)
         imageView.layer.transform = transform
+    }
+
+    fileprivate func configureCloseButton() {
+        closeButton.isHidden = true
+        contentView.addSubview(closeButton)
+        var frame = imageView.frame
+        frame.origin.x += 30
+        frame.origin.y -= 44
+        frame.size.width = contentView.frame.width - 60
+        frame.size.height = 44
+        closeButton.frame = frame
+    }
+
+    fileprivate func configureTextLabel() {
+        textLabel.textAlignment = .center
+        textLabel.numberOfLines = 0
+        var frame = contentView.frame
+        frame.origin.x += 30
+        frame.origin.y += 20
+        frame.size.width = contentView.frame.width - 60
+        frame.size.height = imageView.frame.origin.y - 20
+        textLabel.frame = frame
+        contentView.addSubview(textLabel)
     }
 
     fileprivate func configureImageView() {
