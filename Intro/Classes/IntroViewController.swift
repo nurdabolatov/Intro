@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IntroViewController: UIViewController {
+public class IntroViewController: UIViewController {
 
     public var items: [(String, UIImage)]!
 
@@ -27,7 +27,7 @@ class IntroViewController: UIViewController {
     fileprivate let flowLayout = UICollectionViewFlowLayout()
     fileprivate var collectionView: UICollectionView?
 
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         edgesForExtendedLayout = UIRectEdge()
@@ -76,11 +76,11 @@ class IntroViewController: UIViewController {
 
 extension IntroViewController: UICollectionViewDataSource {
 
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
     }
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier:
             IntroRotateCollectionViewCell.identifier, for: indexPath)
             as! IntroRotateCollectionViewCell
@@ -104,7 +104,7 @@ extension IntroViewController: UICollectionViewDataSource {
 
 extension IntroViewController: UICollectionViewDelegate, UIScrollViewDelegate {
 
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let cellWidth = flowLayout.estimatedItemSize.width
         let progress = scrollView.contentOffset.x.truncatingRemainder(dividingBy: cellWidth) / cellWidth * 100
         prevIndexPath.row = Int(scrollView.contentOffset.x) / Int(cellWidth)

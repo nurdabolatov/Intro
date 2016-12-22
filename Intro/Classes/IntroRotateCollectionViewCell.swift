@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IntroRotateCollectionViewCell: UICollectionViewCell {
+public class IntroRotateCollectionViewCell: UICollectionViewCell {
 
     static let identifier = "TutorialRotateCollectionViewCell"
 
@@ -29,12 +29,12 @@ class IntroRotateCollectionViewCell: UICollectionViewCell {
         configureTextLabel()
         configureCloseButton()
     }
-
-    required init?(coder aDecoder: NSCoder) {
+    
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func prepareForReuse() {
+    override public func prepareForReuse() {
         super.prepareForReuse()
         imageView.transform = CGAffineTransform(rotationAngle: 0)
     }
