@@ -66,11 +66,10 @@ public class IntroRaiseCollectionViewCell: UICollectionViewCell, IntroCollection
     }
 
     fileprivate func configureImageView() {
-        imageView.image = UIImage(named: "diana")
         imageView.contentMode = .scaleAspectFit
         var frame = contentView.frame
         frame.origin.x = (contentView.frame.width - frame.width) / 2
-        frame.origin.y = contentView.frame.maxY - (frame.height / 2)
+        frame.origin.y = contentView.frame.maxY - (frame.height * 0.2)
         imageView.frame = frame
         imageView.layer.anchorPoint = CGPoint(x: 0.5, y: 1.0)
         contentView.addSubview(imageView)
