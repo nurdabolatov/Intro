@@ -40,9 +40,6 @@ final class IntroRotateCollectionViewCell: UICollectionViewCell {
     }
 
     fileprivate func configureCloseButton() {
-        closeButton.setTitleColor(.white, for: .normal)
-        closeButton.backgroundColor = .black
-        closeButton.layer.cornerRadius = 2
         closeButton.isHidden = true
         contentView.addSubview(closeButton)
         var frame = imageView.frame
@@ -54,9 +51,7 @@ final class IntroRotateCollectionViewCell: UICollectionViewCell {
     }
 
     fileprivate func configureTextLabel() {
-        textLabel.textColor = .black
         textLabel.textAlignment = .center
-        textLabel.font = .systemFont(ofSize: 20)
         textLabel.numberOfLines = 0
         var frame = contentView.frame
         frame.origin.x += 30
@@ -68,7 +63,6 @@ final class IntroRotateCollectionViewCell: UICollectionViewCell {
     }
 
     fileprivate func configureImageView() {
-        imageView.contentMode = .scaleAspectFit
         var frame = contentView.frame
         frame.origin.x = (contentView.frame.width - frame.width) / 2
         frame.origin.y = contentView.frame.maxY

@@ -10,9 +10,18 @@ import UIKit
 
 final class IntroViewController: UIViewController {
 
-    var items: [(String, UIImage)]!
-    var closeTitle: String!
-    var didClose: (() -> Void)? = nil
+    public var items: [(String, UIImage)]!
+
+    public var titleColor = UIColor.black
+    public var titleFont = UIFont.systemFont(ofSize: 20)
+
+    public var imageContentMode = UIViewContentMode.scaleAspectFit
+
+    public var closeTitle: String!
+    public var closeColor = UIColor.white
+    public var closeBackgroundColor = UIColor.black
+    public var closeCornerRadius: CGFloat = 2
+    public var didClose: (() -> Void)? = nil
 
     fileprivate var prevIndexPath: IndexPath = IndexPath(item: 0, section: 0)
     fileprivate let flowLayout = UICollectionViewFlowLayout()
@@ -76,8 +85,16 @@ extension IntroViewController: UICollectionViewDataSource {
             IntroRotateCollectionViewCell.identifier, for: indexPath)
             as! IntroRotateCollectionViewCell
         cell.textLabel.text = items[indexPath.item].0
+        cell.textLabel.textColor = titleColor
+        cell.textLabel.font = titleFont
+
         cell.imageView.image = items[indexPath.item].1
+        cell.imageView.contentMode = imageContentMode
+        
         cell.closeButton.setTitle(closeTitle, for: .normal)
+        cell.closeButton.setTitleColor(closeColor, for: .normal)
+        cell.closeButton.backgroundColor = closeBackgroundColor
+        cell.closeButton.layer.cornerRadius = closeCornerRadius
         cell.closeButton.addTarget(self, action: #selector(close), for: .touchUpInside)
         cell.isCloseButtonHidden = (indexPath.item != items.count - 1)
         return cell
