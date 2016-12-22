@@ -77,6 +77,7 @@ extension IntroViewController: UICollectionViewDataSource {
             as! IntroRotateCollectionViewCell
         cell.textLabel.text = items[indexPath.item].0
         cell.imageView.image = items[indexPath.item].1
+        cell.closeButton.setTitle(closeTitle, for: .normal)
         cell.closeButton.addTarget(self, action: #selector(close), for: .touchUpInside)
         cell.isCloseButtonHidden = (indexPath.item != items.count - 1)
         return cell

@@ -40,7 +40,6 @@ final class IntroRotateCollectionViewCell: UICollectionViewCell {
     }
 
     fileprivate func configureCloseButton() {
-        closeButton.setTitle("НАЧАТЬ", for: .normal)
         closeButton.setTitleColor(.white, for: .normal)
         closeButton.backgroundColor = .black
         closeButton.layer.cornerRadius = 2
