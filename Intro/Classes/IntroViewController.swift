@@ -20,6 +20,8 @@ public class IntroViewController: UIViewController {
     public var closeTitle: String!
     public var closeColor = UIColor.white
     public var closeBackgroundColor = UIColor.black
+    public var closeBorderWidth: CGFloat = 0
+    public var closeBorderColor: CGColor = UIColor.black.cgColor
     public var closeCornerRadius: CGFloat = 2
     public var didClose: (() -> Void)? = nil
 
@@ -94,6 +96,8 @@ extension IntroViewController: UICollectionViewDataSource {
         cell.closeButton.setTitle(closeTitle, for: .normal)
         cell.closeButton.setTitleColor(closeColor, for: .normal)
         cell.closeButton.backgroundColor = closeBackgroundColor
+        cell.closeButton.layer.borderWidth = closeBorderWidth
+        cell.closeButton.layer.borderColor = closeBorderColor
         cell.closeButton.layer.cornerRadius = closeCornerRadius
         cell.closeButton.addTarget(self, action: #selector(close), for: .touchUpInside)
         cell.isCloseButtonHidden = (indexPath.item != items.count - 1)
