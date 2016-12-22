@@ -10,7 +10,7 @@ import UIKit
 
 public class IntroViewController: UIViewController {
 
-    public var items: [(String, UIImage)]!
+    public var items: [(String, UIImage?)]!
 
     public var titleColor = UIColor.black
     public var titleFont = UIFont.systemFont(ofSize: 20)
