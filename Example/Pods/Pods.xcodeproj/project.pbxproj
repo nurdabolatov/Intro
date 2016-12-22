@@ -16,6 +16,7 @@
 		58AB108A4F257D66D792A784DFA2AA5B /* Pods-Intro_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 489A2341ED5DA8F8B92FD9A361D35235 /* Pods-Intro_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		742CFFF149A75EFB2E23949CD4F2F8EA /* Pods-Intro_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 624E0CCA3ACAD13EC5E6FB1CCD78D4F3 /* Pods-Intro_Tests-dummy.m */; };
 		7C273AE7C95C9F8E83C35D8E904413CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		931DF6431E0BF2C20002B8F1 /* IntroRaiseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931DF6421E0BF2C20002B8F1 /* IntroRaiseCollectionViewCell.swift */; };
 		C4F053131BB79DA20B1CE621CBDECC25 /* IntroRotateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D7FACB34F5E9B2CE5BBA0E27B74B65 /* IntroRotateCollectionViewCell.swift */; };
 		ED92D8DEB969AC745578EC3DE9DD6CA9 /* Intro-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC3BB1AA0672EB7DAC6508AEE935346 /* Intro-dummy.m */; };
 /* End PBXBuildFile section */
@@ -48,6 +49,7 @@
 		6F6510A4534BA2145F386E9F595A7B75 /* Pods-Intro_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Intro_Example.release.xcconfig"; sourceTree = "<group>"; };
 		8330AE69633044D1D5D6A004D15CF8C0 /* Pods-Intro_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Intro_Example.modulemap"; sourceTree = "<group>"; };
 		9041B31F9C3F85717316DF10EECA0AF1 /* Pods_Intro_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Intro_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		931DF6421E0BF2C20002B8F1 /* IntroRaiseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroRaiseCollectionViewCell.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		966F502BFEDA65910FBA8C318CEB2F05 /* Pods-Intro_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Intro_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9757A4379A6718C143579BA3919EE82B /* Pods-Intro_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Intro_Example-resources.sh"; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 			children = (
 				632F4F700A5F91097F264C4694BE892C /* IntroViewController.swift */,
 				46D7FACB34F5E9B2CE5BBA0E27B74B65 /* IntroRotateCollectionViewCell.swift */,
+				931DF6421E0BF2C20002B8F1 /* IntroRaiseCollectionViewCell.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				931DF6431E0BF2C20002B8F1 /* IntroRaiseCollectionViewCell.swift in Sources */,
 				ED92D8DEB969AC745578EC3DE9DD6CA9 /* Intro-dummy.m in Sources */,
 				C4F053131BB79DA20B1CE621CBDECC25 /* IntroRotateCollectionViewCell.swift in Sources */,
 				20118A069345FAB44964240EF1AE9972 /* IntroViewController.swift in Sources */,
