@@ -10,7 +10,7 @@ import UIKit
 
 public class IntroRotateCollectionViewCell: UICollectionViewCell {
 
-    static let identifier = "TutorialRotateCollectionViewCell"
+    static let identifier = "IntroRotateCollectionViewCell"
 
     let textLabel = UILabel()
     let imageView = UIImageView()
