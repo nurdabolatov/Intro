@@ -9,7 +9,7 @@
 
 ## Overview
 
-Intro is a simple animated walkthrough / intro / tutorial.
+An iOS framework to easily create simple animated walkthrough, written in Swift.
 
 ## Requirements
 
